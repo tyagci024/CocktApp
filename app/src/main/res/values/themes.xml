@@ -1,0 +1,8 @@
+<resources>
+    <style name="Base.Theme.Warmupappp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@android:color/transparent</item> <!-- Durum çubuğu rengini şeffaf yapın -->
+        <item name="android:statusBarColor">#FFA4D6</item> <!-- Durum çubuğu arka plan rengini şeffaf yapın -->
+    </style>
+
+    <style name="Theme.Warmupappp" parent="Base.Theme.Warmupappp" />
+</resources>

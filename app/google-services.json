@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "436047335155",
+    "project_id": "cocktailapp-cc253",
+    "storage_bucket": "cocktailapp-cc253.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436047335155:android:9bbe649cf147e469863186",
+        "android_client_info": {
+          "package_name": "com.example.warmupappp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1FYg-pmZpsUmAHxOHGhZpTbuCIhNMBdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

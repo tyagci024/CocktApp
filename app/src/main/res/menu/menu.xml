@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_all"
+        android:icon="@drawable/a85b7yrg4" />
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@drawable/favstar" />
+
+</menu>
