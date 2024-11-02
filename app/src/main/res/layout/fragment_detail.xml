@@ -7,7 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- İlk ConstraintLayout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/firstLayout"
         android:layout_width="0dp"
@@ -29,7 +28,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- ScrollView içerisine alınmış ikinci ConstraintLayout -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -55,7 +53,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <!-- Başlık -->
                 <TextView
                     android:id="@+id/textViewName"
                     android:layout_width="0dp"
@@ -75,6 +72,16 @@
                     android:focusable="true"/>
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/textViewSubInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Sub Info: Additional information about the cocktail."
+                android:textColor="#5e6472"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/titleLinearLayout" />
+
             <LinearLayout
                 android:id="@+id/infoLayout"
                 android:layout_width="match_parent"
@@ -83,9 +90,8 @@
                 android:padding="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/titleLinearLayout">
+                app:layout_constraintTop_toBottomOf="@+id/textViewSubInfo">
 
-                <!-- Kalori Bölümü -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -114,7 +120,6 @@
                         android:textSize="@dimen/dp_16" />
                 </LinearLayout>
 
-                <!-- Hazırlama Süresi Bölümü -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -124,21 +129,20 @@
                     android:padding="8dp">
 
                     <TextView
-                        android:id="@+id/textViewPreps"
+                        android:id="@+id/textViewGlass"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="25"
                         android:textColor="#5e6472"
                         android:textSize="@dimen/dp_24"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textViewPrepTitle"
+                        android:id="@+id/textViewGlassTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="minutes"
+                        android:text="Glass Type"
                         android:textColor="#5e6472"
                         android:textSize="@dimen/dp_16" />
                 </LinearLayout>
@@ -172,6 +176,7 @@
                 android:textColor="#000000"
                 android:textSize="18sp"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,7 @@ import com.example.warmupappp.adapter.IngredientAdapter
 import com.example.warmupappp.R
 import com.example.warmupappp.ViewModel.DetailCocktailViewModel
 import com.example.warmupappp.databinding.FragmentDetailBinding
+import com.example.warmupappp.model.Flavour
 import com.example.warmupappp.util.downloadFromURL
 import com.squareup.picasso.Picasso
 import dagger.hilt.android.AndroidEntryPoint
@@ -52,6 +53,12 @@ class DetailFragment : Fragment() {
             textViewName.text = args.cocktail.name ?: "N/A"
             textViewHowTo.text =args.cocktail.howto?.toString() ?: "N/A"
             textViewNutrition.text=extractNumbers(args.cocktail.nutrition)
+            val flavoursString = getFlavoursAsString(args.cocktail.flavours!!)
+            textViewSubInfo.text = "Flavours: $flavoursString"
+
+            textViewGlass.text = (args.cocktail.glass ?: "N/A")
+                .split(" ")
+                .joinToString(" ") { it.replaceFirstChar { char -> char.uppercase() } }
             binding.imageViewCocktail.downloadFromURL(args.cocktail.image)
 
 
@@ -74,6 +81,9 @@ class DetailFragment : Fragment() {
     }
     private fun extractNumbers(input: String?): String {
         return input?.replace("[^\\d]".toRegex(), "") ?: "0"
+    }
+    fun getFlavoursAsString(flavours: List<Flavour>): String {
+        return flavours.joinToString(", ") { it.flavour }
     }
 
 }
